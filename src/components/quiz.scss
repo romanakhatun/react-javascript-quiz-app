@@ -1,0 +1,126 @@
+//Spacing
+$spacing-20: 0.0625rem; // 1px
+$spacing-40: 0.125rem; // 2px
+$spacing-50: 0.25rem; // 4px
+$spacing-100: 0.5rem; // 8px
+$spacing-150: 0.75rem; // 12px
+$spacing-200: 1rem; // 16px
+$spacing-300: 1.5rem; // 24px
+$spacing-400: 2rem; // 32px
+$spacing-500: 2.5rem; // 40px
+$spacing-600: 3rem; // 48px
+$spacing-700: 4rem; // 64px
+$spacing-800: 5rem; // 80px
+$spacing-900: 6rem; // 96px
+$spacing-1000: 7.5rem; // 120px
+$spacing-1500: 12.5rem; // 200px
+
+//  color 
+$white: #fff;
+$black: #000;
+
+$red-50: #ff5656;
+$red-100: #c16868;
+
+$green-50: #56ffa4;
+$green-100: #59bc86;
+
+$yellow-50: #ffcc91;
+$yellow-100: #d38558;
+
+$blue-50: #56ccff;
+$blue-100: #6eafb4;
+$blue-150: #0085a3;
+
+$rgbBlack: rgba(0, 0, 0, 0.25);
+$rgbWhite: rgb(255, 255, 255);
+$rgbBlue: rgb(135, 241, 255);
+
+
+
+//******Style*****//
+//Common
+.btn{
+    border: none;
+    cursor: pointer;
+    border: 2px solid $yellow-100;
+    border-radius: $spacing-100;
+    height: $spacing-500;
+    margin: $spacing-200 0;
+    padding: 0 $spacing-500;
+    font-weight: bold;
+    box-shadow: 0px 5px 10px $rgbBlack;
+    background: linear-gradient(180deg, $white, $yellow-50);
+
+    &:focus{
+       outline: none;
+    }
+    a{
+        text-decoration: none;
+        color: $black;
+    }
+}
+
+//Quiz Section
+.quizSection{
+    text-align: center;
+   
+   h1{
+        margin: $spacing-300;
+        font-size: 70px;
+        font-weight: 400;
+        background-size: 100%;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(2px 2px $blue-150);
+        background-image: linear-gradient($rgbWhite, $rgbBlue);
+   }
+  .questions{
+        max-width: 1100px;
+        background: $rgbWhite;
+        border-radius: $spacing-100;
+        padding: $spacing-300;
+        box-shadow: 0px 5px 10px $rgbBlack;
+        text-align: center;
+        margin: $spacing-150;
+
+        .score{
+            font-size: 2rem;
+            margin: 0;
+        }
+   }
+}
+
+//Questionnaire Section
+.questionnaireSection{
+
+     #quizOptions{
+        cursor: pointer;
+        font-size: 0.8rem;
+        width: 100%;
+        height: $spacing-500;
+        margin: $spacing-50 0px;
+        border-radius: 10px;
+        text-shadow: 0px 1px 0px $rgbBlack;
+        border: 3px solid $rgbWhite;
+        color: $rgbWhite;
+        
+        &:focus{
+            outline: none;
+         } 
+        &:hover{    
+            opacity: 0.8;
+            transition: all 0.3s ease 0s;
+        }
+     }
+
+    .normal{
+        background: linear-gradient(90deg, $blue-50, $blue-100);
+    }
+    .incorrect{
+        background: linear-gradient(90deg, $red-50, $red-100);
+    }
+    .correct{
+        background: linear-gradient( 90deg , $green-50, $green-100);
+    }
+}
